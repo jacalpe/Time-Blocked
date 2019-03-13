@@ -117,6 +117,14 @@ public class GameController : MonoBehaviour
 
     }
 
+    public void ActivaPersiana6()
+    {
+
+        persiana.SetTrigger("Baja");
+        Invoke("CargaNivel6", tiempoAnimacion);
+
+    }
+
 
     //Funciones de carga de Escenas
     public void CargaMenu()
@@ -163,5 +171,10 @@ public class GameController : MonoBehaviour
     public void CargaCreditos()
     {
         SceneManager.LoadScene(6);
+    }
+
+    public void CargaNivel6()
+    {
+        SceneManager.LoadScene("Oculto");
     }
 }
